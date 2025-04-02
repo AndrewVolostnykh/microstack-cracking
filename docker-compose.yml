@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  redis-ins:
+    image: redislabs/redisinsight:latest
+    hostname: redis-ui
+    container_name: redis-ui-new
+    ports:
+      - "8001:8001"
+
+  redis:
+    image: redis:latest
+    hostname: redis
+    container_name: redis-new
+    ports:
+      - "6379:6379"
